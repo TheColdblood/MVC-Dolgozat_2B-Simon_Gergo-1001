@@ -1,12 +1,10 @@
-import Termekek from "../modell/Termekek.js";
-import View from "../view/View.js";
+import { LISTA } from "../modell/adat.js";
+import Termekek from "../view/Termekek.js";
 
-export default class Controller{
-
-    constructor(){
-        
-    };
-}
-
-new Termekek();
-new View();
+const kivTermekLista = []
+const taroloElem = $(".tartalom");
+new Termekek(LISTA, taroloElem)
+ 
+$(window).on("vasarlas",(event)=>{
+    console.log(event.detail)
+})
